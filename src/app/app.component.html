@@ -1,0 +1,10 @@
+<div class="pg"  [ngClass]= "{'day':isDay === true, 'night':isDay === false}">
+    <div class="switch-mode">
+    <div class="box"  [ngClass]= "{'boxedout':isDay === true, 'boxedin':isDay === false}">
+        <div class="switch"  [ngClass] = "{'switchedout':isDay === true, 'switchedin':isDay === false}" >
+        <div class="yoke"  [ngClass] = "{'unyoked':isDay === true, 'yoked':isDay === false}" (click) = toogleNightMode()></div>
+        </div>   
+    </div>
+</div>
+<app-header-search></app-header-search>
+</div>

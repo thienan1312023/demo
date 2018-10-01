@@ -1,0 +1,7 @@
+.content-bible{
+    width: 55%;
+}
+.content-container{
+    display: flex;
+    justify-content: center;
+}

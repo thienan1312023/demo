@@ -1,0 +1,47 @@
+<form>
+<div class="header-search">
+    <mat-form-field class="example-full-width abbrev-search input-search-content">
+        <input matInput placeholder="Search content ..." value="">
+      </mat-form-field>
+      
+  <mat-form-field class="abbrev-search">
+  <mat-select placeholder="Favorite abbrev" [(value)]="selectedValueAbbrev" name="abbrev" (selectionChange)="OnChangeAbbrev($event.value)">
+    <mat-option *ngFor="let abbrev of abbrevList" [value]="abbrev.value">
+      {{abbrev.name}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-form-field class="abbrev-search">
+  <mat-select placeholder="Favorite Chapter" [(value)]="selectedValueChapter" name="chapter" (selectionChange)="OnChangeChapter()" >
+    <mat-option *ngFor="let chapter of listChapterSelected" [value]="chapter.value">
+      {{chapter.name}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-form-field>
+    <mat-select placeholder="Favorite Sentence" [(value)]="selectedValueSentence" name="sentence" (selectionChange)="OnChangeSentence()">
+      <mat-option *ngFor="let sentence of listSentenceSelected" [value]="sentence.value">
+        {{sentence.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+<div>
+</div>
+</form>
+<div class="layout-content">
+  <div class="left-nav">
+      <i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i>
+  </div>
+  <div class="bible-content">
+    <app-content-bible [ListSentence] = "contentBible"></app-content-bible>
+  </div>
+  <div  class="right-nav">
+      <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>
+  </div>
+</div>
+<!-- Copyright 2018 Google Inc. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at http://angular.io/license -->

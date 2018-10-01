@@ -1,0 +1,28 @@
+.header-search{
+    display: flex;
+    justify-content: center;
+}
+.abbrev-search{
+    padding-right: 20px;
+}
+.cdk-overlay-pane{
+    top: 66.5px !important;
+}
+.input-search-content{
+    padding-top: 1px;
+}
+
+  .layout-content{
+      display: flex;
+      justify-content: center;
+  }
+  .left-nav, .right-nav{
+      padding-top: 40vh;
+  }
+  .bible-content{
+      max-width: 75vw;
+  }
+
+  .fa-arrow-circle-o-left, .fa-arrow-circle-o-right{
+      font-size: 30px
+  }
