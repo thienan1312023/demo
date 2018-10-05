@@ -1,7 +1,8 @@
 <form>
 <div class="header-search">
     <mat-form-field class="example-full-width abbrev-search input-search-content">
-        <input matInput placeholder="Search content ..." value="">
+        <input matInput placeholder="Search content ..."  [(ngModel)]="searchString" name="searchString"
+        (keydown.enter)="onKeydown()">
       </mat-form-field>
       
   <mat-form-field class="abbrev-search">
@@ -36,7 +37,7 @@
       <i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i>
   </div>
   <div class="bible-content">
-    <app-content-bible [ListSentence] = "contentBible"></app-content-bible>
+    <app-content-bible [ListSentence] = "contentBible" [searchString] = "searchString"></app-content-bible>
   </div>
   <div  class="right-nav">
       <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>

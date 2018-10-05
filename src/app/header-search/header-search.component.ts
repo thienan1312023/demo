@@ -31,6 +31,7 @@ export class HeaderSearchComponent implements OnInit {
   listSentenceSelected: SentenceDropDownList[];
   listContentSentence: string[];
   contentBible: Sentence[];
+  searchString: string = "";
   selectedSentence: Sentence;
   constructor(
     private bibleDataService: BibleDataService
@@ -72,14 +73,6 @@ export class HeaderSearchComponent implements OnInit {
     });
     this.listChapterSelected = [];
     this.listChapterSelected = this.generateNumberListIncrease(itemSelected.numchapter);     
-    // this.listContentSentence = itemSelectedAbbrev.chapters[this.selectedValueChapter]; 
-    // var sentence: Sentence = {
-    //   abbrevID: itemSelectedAbbrev.abbrev,
-    //   chapter: this.selectedValueChapter + 1,
-    //   sentence: 1,
-    //   content: this.listContentSentence[0]
-    // }
-    // this.contentBible = [sentence];
   }
   OnChangeChapter(){
     var selectedAbbrev = this.selectedValueAbbrev;
@@ -114,5 +107,8 @@ export class HeaderSearchComponent implements OnInit {
         content: this.listContentSentence[this.selectedValueSentence]
     }
       this.contentBible = [sentence];
+  }
+  onKeydown(contentSearch){
+    console.log(this.searchString);
   }
 }

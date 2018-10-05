@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { HeaderSearchComponent } from './header-search/header-search.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {FusejsModule} from 'angular-fusejs'
 import {
   MatAutocompleteModule,
   MatBadgeModule,
@@ -54,6 +55,7 @@ import { ContentBibleComponent } from './content-bible/content-bible.component';
     HttpClientModule,
     BrowserAnimationsModule,
     FormsModule,
+    FusejsModule,
     MatAutocompleteModule,
     MatBadgeModule,
     MatBottomSheetModule,

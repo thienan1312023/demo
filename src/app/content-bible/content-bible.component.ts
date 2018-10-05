@@ -8,6 +8,7 @@ import {Sentence} from '../common/Sentence';
 export class ContentBibleComponent implements OnInit {
   @Input() ListSentence: Sentence[];
   isOpen = false;
+  @Input() searchString: string = "";
   ngOnInit(){
 
   }
